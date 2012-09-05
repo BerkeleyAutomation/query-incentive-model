@@ -1,0 +1,67 @@
+<html>
+<head>
+<link href="{{url}}bootstrap/css/bootstrap.css" rel="stylesheet">
+<!--<script src="{{url}}bootstrap/slider/carpe_slider.js" type="text/javascript"> </script>
+<link href="{{url}}bootstrap/slider/carpe_slider.css" rel="stylesheet" />-->
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=131333860346048";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<center>
+{% if dup %}
+<h3>Welcome Back!</h3>
+{% else %}
+<h3>Thank You!</h3>
+{% endif %}
+<p>Please edit this text and share this custom link with your friends and family using Email, Facebook, Twitter, or carrier pigeon!</p>
+<p>&nbsp;</p>
+<form>
+<textarea rows="8" style="width:40%;border:2px solid black;">
+Proposition 30 is relevant to everyone who is interested in education in California -- students, alumni, teachers, parents, employers. Please take a minute to visit this website to learn more and spread the word before November 6:
+
+{{link}}
+
+This link will give me credit toward being one of the 50 Most Influential People in this effort.  At the site you'll get another link to send to your friends and family and you can then track your own Influence.
+</textarea><br/>
+<div class="fb-send" data-href="{{link}}" style="position: relative;top:-3px;"></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{link}}" data-text="Become aware and help me spread the word about California Proposition 30:" data-count="none" data-hashtags="prop30">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</form>
+<p>&nbsp;</p>
+<strong>Optional and confidential:</strong>
+<p>My own opinion on Proposition 30 is:</p>
+<div style="width: 600">
+<script>
+
+window.dhx_globalImgPath = "{{url}}bootstrap/codebase/imgs/";
+
+</script>
+<script  src="{{url}}bootstrap/codebase/dhtmlxcommon.js"></script>
+<script  src="{{url}}bootstrap/codebase/dhtmlxslider.js"></script>
+<script  src="{{url}}bootstrap/codebase/ext/dhtmlxslider_start.js"></script>
+<link rel="STYLESHEET" type="text/css" href="{{url}}bootstrap/codebase/dhtmlxslider.css">
+   
+<form method="POST">
+{% csrf_token %}
+<input type="hidden" name="link" value="{{link}}">
+<input type="hidden" name="dup" value="{{dup}}">
+<input class="dhtmlxSlider" type="text" name="slider1" style="width:400px" value="{{slider}}">
+<small><strong>Strongly Oppose</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Strongly Support</strong></small>
+
+<button type="submit" class="btn btn-primary">Save My Opinion!</button><br/><small>{{saved}}</small>
+</form>
+</div>
+<p>&nbsp;</p>
+To join an online discussion about Proposition 30:<br/>
+<a href="http://opinion.berkeley.edu/prop-30">http://opinion.berkeley.edu/prop-30</a><p/>
+</center>
+<p>&nbsp;</p>
+<a href="http://opinion.berkeley.edu/ddi/"><u><center><strong>This is a University of California CITRIS Data and Democracy project</strong></center></u></a>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>California Proposition 30 Awareness</title>
+<meta property="og:title" content="California Proposition 30 Awareness" />
+<meta property="og:description" content="Become aware and help me spread the word about California Proposition 30: #prop30" />
+<link href="{{url}}bootstrap/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+   <center> <div style="width: 75%;margin-top:30px;">
+<div align="justify">
+<center><h3>California Proposition 30: Temporary Taxes to Fund Education.</h3></center>
+<p>Everyone who is interested in education in California -- students, alumni, teachers, parents, employers -- should be aware of Proposition 30 on the November 2012 California ballot. It proposes temporary tax increases of 0.25% in the state sales tax and an incremental increase in personal income tax on households earning more than $250,000. If the measure does not pass, a multi-billion dollar cut in state funding to education at <em>all levels</em> will be triggered automatically.</p>
+
+<strong>Become one of the 50 Most Influential People</strong><br/>
+
+<p>
+Whether you support or oppose the initiative, we invite you to help
+raise awareness regarding the important choices facing California
+voters. Please enter your email address and we'll send you a custom
+web link to this page that you can share with your friends and family
+using Email, Facebook, or Twitter. When they visit and add their email
+addresses, we'll keep track. After the election, we'll contact the 50
+Most Influential People from this site to ask if they'd like to be
+listed on the website. We compute influence using the Kleinberg and
+Raghavan algorithm. Your influence value increases by one point for
+each person you invite, and by half a point for every person those
+people invite, and so on.
+<p>&nbsp;</p>
+<center>    <form class="form-inline" action="{{url}}save/{{parent}}" method="post">
+        {% csrf_token %}
+    <input name="email" type="text" class="input-large" placeholder="Email Address">
+    <button type="submit" class="btn btn-primary">I'm Aware</button>&nbsp;&nbsp;&nbsp;
+    <strong>{{counter}}</strong> participants so far!
+    </form></center>
+<small><font color="red">{{error}}</font></small><br/>
+We won't share your email with anyone and will only send you one email if you are among the 50 Most Influential People by the date of the election.<br/>
+<p>&nbsp;</p>
+
+<strong>Resources</strong>
+<ul><li><a href="http://vig.cdn.sos.ca.gov/2012/general/pdf/30-title-summ-analysis.pdf" target="_blank">Official Voters' Guide</a></li>
+<li><a href="http://vig.cdn.sos.ca.gov/2012/general/pdf/30-arg-rebuttals.pdf" target="_blank">Arguments and rebuttals</a></li>
+<li><a href="http://ballotpedia.org/wiki/index.php/California_Proposition_30,_Sales_and_Income_Tax_Increase_%282012%29" target="_blank">Ballotpedia article</a></li>
+<li><a href="http://votersedge.org/california/ballot-measures/2012/november/prop-30">MapLight, Voter’s Edge California</a></li>
+<li><a href="http://yesonprop30.com/" target="_blank">Yes on Prop 30 campaign</a></li>
+<li><a href="http://www.stopprop30.com/" target="_blank">Stop Prop 30</a></li>
+<li><a href="http://www.sciencemag.org/content/334/6055/509.abstract" target="_blank">Time-Critical Social Mobilization by Pickard, et. al.</a></li>
+<li><a href="http://www.cs.cornell.edu/home/kleinber/focs05-qin.pdf" target="_blank">Query Incentive Networks by Jon Kleinberg and Prabhakar Raghavan</a></li>
+<li><a href="http://opinion.berkeley.edu/prop-30/" target="_blank">Opinion Space Discussion on Prop 30</a></li></ul>
+
+<!--
+<p>The DDI Prop 30 Awareness Project aims to encourage education and discussion
+about California's Proposition 30. When you submit your email address, a
+customized link will be generated for you to share with your friends. When
+the election is over, we will post a list of the most "influential" users.
+Your email address will be used only to calculate awareness you have raised
+by sharing on your social network. It will not be shared with any other
+organization or project. Contact ddi@citris-uc.org with any questions or
+concerns.</p>
+
+<hr noshade="noshade" size="3"/>
+<strong>To join a discussion about this proposition:</strong>
+<a href="http://opinion.berkeley.edu/prop-30" target="_blank">http://opinion.berkeley.edu/prop-30</a><p/>
+<small>All of the views represented in the discussion are user provided and not representative of the views of the Berkeley Laboratory for Automation Sciences or the University of California.</small>-->
+</div>
+</div></center>
+<script src="{{url}}bootstrap/js/bootstrap.js"></script>
+<!--<a href="http://opinion.berkeley.edu/ddi/"><center><img src="{{url}}bootstrap/DDI_rect_logo1.png"/></center></a>-->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<a href="http://opinion.berkeley.edu/ddi/"><u><center><strong>This is a University of California CITRIS Data and Democracy project</strong></center></u></a>
+</body>
+
+</html>
